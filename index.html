@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-App</title>
+    <style>
+
+        .todo-container { 
+            width: 400px;
+            height: 400px;
+            background-color: crimson;
+            color: white;
+        }
+
+        .btn {
+            width: 75px;
+            height: 30px;
+            display: block;
+            background-color: cadetblue;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgb(65, 110, 111);
+        }
+
+        ul {
+            list-style: none;
+            display: inline;
+            padding: 12px;
+        }
+
+        li {
+            font-size: 16px;
+            background-color: rgb(42, 8, 110);
+            margin: 5px;
+            padding: 3px;
+            width: 90%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        <div class="todo-container">
+        <ul id="item-list"> 
+            
+
+
+        </ul>
+
+        
+    </div>
+    <div class="btn" onclick="addElement()">+</div>
+    </div>
+
+    <script>
+
+        var todoList = document.getElementById("item-list");
+
+        function addElement()
+        {
+            var checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.name = 'name';
+            checkbox.value = 'Value';
+            checkbox.id = "id";
+            var newelement = document.createElement("li");
+            var text = document.createElement('p');
+            text.textContent = "Hello there";
+            newelement.appendChild(checkbox);
+            newelement.appendChild(text);
+            todoList.appendChild(newelement);
+        }
+
+    </script>
+
+</body>
+</html>
